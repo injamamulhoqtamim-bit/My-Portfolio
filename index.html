@@ -106,6 +106,30 @@ letter-spacing:1px;
 
 }
 
+/* Light Mode — Black */
+
+/* Default (Day Mode) */
+
+.frontend-text{
+color:#000;
+}
+
+.cyber-text{
+color:#ff0000;
+}
+
+/* Dark Mode */
+
+[data-theme="dark"] .frontend-text{
+color:#84f970;
+
+}
+
+[data-theme="dark"] .cyber-text{
+color:#ff0000;
+
+}
+
 </style>
 
 </head>
@@ -232,7 +256,8 @@ Injamamul Hoq
       </h1>
 
       <!-- Typing Animation -->
-      <h2 class="text-xl sm:text-2xl md:text-4xl font-extrabold text-gray-700 h-16">
+      <h2 id="typing-heading"
+class="text-xl sm:text-2xl md:text-4xl font-extrabold h-16">
         <span id="typed-text"></span>
         <span class="border-r-4 border-gray-700 animate-pulse ml-1"></span>
       </h2>
@@ -1026,21 +1051,46 @@ window.addEventListener("scroll", revealCards);
 
     
 // Typing Animation
+// Typing Animation with Color Change
+
 const texts = [
-  "Frontend Developer ",
-  "Cybersecurity Researcher"
+  { text: "Frontend Developer ", className: "frontend-text" },
+  { text: "Cybersecurity Researcher", className: "cyber-text" }
 ];
-let count = 0, index = 0;
+
+let count = 0;
+let index = 0;
+
 (function type(){
+
   if(count === texts.length) count = 0;
-  const currentText = texts[count];
-  const letter = currentText.slice(0, ++index);
-  document.getElementById('typed-text').textContent = letter;
-  if(letter.length === currentText.length){
-    setTimeout(()=>{ index=0; count++; type(); },1500);
+
+  const current = texts[count];
+  const letter = current.text.slice(0, ++index);
+
+  const typed = document.getElementById('typed-text');
+  const heading = document.getElementById('typing-heading');
+
+  typed.textContent = letter;
+
+  // Apply correct class
+  heading.classList.remove("frontend-text","cyber-text");
+  heading.classList.add(current.className);
+
+  if(letter.length === current.text.length){
+
+    setTimeout(()=>{
+      index = 0;
+      count++;
+      type();
+    },1500);
+
   } else {
+
     setTimeout(type,100);
+
   }
+
 })();
 
 // Floating Logo Bubbles
