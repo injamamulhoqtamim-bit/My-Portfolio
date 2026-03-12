@@ -9,7 +9,10 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<!-- signature link -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
 <style>
 html { scroll-behavior: smooth; }
 
@@ -61,30 +64,78 @@ html { scroll-behavior: smooth; }
   height: 28px;
   object-fit: contain;
 }
+
+/* Logo Signature */
 .logo-signature{
-font-family: 'Great Vibes', cursive;
-font-size: 30px;
-background: linear-gradient(90deg,#22d3ee,#3b82f6,#a855f7,#22d3ee);
-background-size: 300%;
+font-family: 'Pacifico', cursive;
+font-size: 28px;
+
+background: linear-gradient(90deg,#06b6d4,#3b82f6,#8b5cf6);
 -webkit-background-clip: text;
 color: transparent;
-font-weight: 600;
+
 letter-spacing: 1px;
-animation: gradientMove 6s linear infinite;
-text-shadow: 0 0 10px rgba(59,130,246,0.4);
+transition: 0.3s;
 }
 
-/* Gradient animation */
-
-@keyframes gradientMove{
-
-0%{
-background-position:0%;
+.logo-signature:hover{
+transform: scale(1.05);
 }
 
-100%{
-background-position:300%;
+/* Navbar Logo Container */
+
+.dev-logo{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
 }
+
+/* IH Logo Badge */
+
+.logo-badge{
+
+width:42px;
+height:42px;
+
+border-radius:12px;
+
+background: linear-gradient(135deg,#06b6d4,#3b82f6,#8b5cf6);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:white;
+font-weight:bold;
+font-size:16px;
+
+box-shadow:0 0 12px rgba(59,130,246,0.5);
+
+transition:0.3s;
+
+}
+
+.logo-badge:hover{
+transform:scale(1.1) rotate(-5deg);
+box-shadow:0 0 18px rgba(139,92,246,0.7);
+}
+
+/* Signature Name */
+
+.logo-signature{
+
+font-family:'Pacifico', cursive;
+
+font-size:28px;
+
+background: linear-gradient(90deg,#22d3ee,#3b82f6,#a855f7);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+letter-spacing:1px;
 
 }
 
@@ -116,8 +167,17 @@ background-position:300%;
   </ul>
 </div>
 
-<a href="#home" class="logo-signature">
+<!-- Developer Logo -->
+<a href="#home" class="dev-logo">
+
+<div class="logo-badge">
+IH
+</div>
+
+<span class="logo-signature">
 Injamamul Hoq
+</span>
+
 </a>
 
 </div>
