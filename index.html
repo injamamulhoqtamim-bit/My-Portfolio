@@ -365,6 +365,42 @@ class="w-7 h-7">
   </div>
 
 </section>
+<!-- ===== HERO STATS LINE — ANIMATED ===== -->
+<section class="bg-base-100 py-10 px-5">
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+
+      <!-- Projects -->
+      <div class="p-4 rounded-xl hover:bg-base-200 transition">
+        <h3 class="text-4xl font-bold text-primary counter" data-target="5">0+</h3>
+        <p class="text-gray-500 mt-2">Projects</p>
+      </div>
+
+      <!-- Internship -->
+      <div class="p-4 rounded-xl hover:bg-base-200 transition">
+        <h3 class="text-4xl font-bold text-primary counter" data-target="0">0+</h3>
+        <p class="text-gray-500 mt-2">Internship</p>
+      </div>
+
+      <!-- Publication -->
+      <div class="p-4 rounded-xl hover:bg-base-200 transition">
+        <h3 class="text-4xl font-bold text-primary counter" data-target="0">0+</h3>
+        <p class="text-gray-500 mt-2">Publication</p>
+      </div>
+
+      <!-- Certifications -->
+      <div class="p-4 rounded-xl hover:bg-base-200 transition">
+        <h3 class="text-4xl font-bold text-primary counter" data-target="2">0+</h3>
+        <p class="text-gray-500 mt-2">Certifications</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 <!-- Animation Script -->
 <script>
@@ -380,6 +416,8 @@ window.addEventListener("load", () => {
 })
 
 </script>
+
+
 
 <!-- About Section -->
 <section id="about" class="py-24 bg-base-100 px-5">
@@ -1431,6 +1469,34 @@ clearInterval(interval);
 
 </script>
 
+<script>
+/* ===== Animated Counter ===== */
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+  const target = +counter.getAttribute("data-target");
+  let count = 0;
+
+  const speed = 40; // smaller = faster
+
+  const update = () => {
+
+    if(count < target){
+      count++;
+      counter.innerText = count + "+";
+      setTimeout(update, speed);
+    } else {
+      counter.innerText = target + "+";
+    }
+
+  };
+
+  update();
+
+});
+</script>
 
 </body>
 </html>
