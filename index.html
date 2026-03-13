@@ -90,20 +90,45 @@ box-shadow:0 0 18px rgba(139,92,246,0.7);
 
 /* Signature Name */
 
-.logo-signature{
+/* ===== NAVBAR ONLY Name Style — Animated ===== */
 
-font-family:'Pacifico', cursive;
+/* Color Animation */
+@keyframes colorShift {
+  0%   { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
 
-font-size:28px;
+/* Light Mode — Emerald Animated */
+.navbar .logo-signature{
+  font-family:'Pacifico', cursive;
+  font-size:28px;
 
-background: linear-gradient(90deg,#22d3ee,#3b82f6,#a855f7);
+  background: linear-gradient(90deg,#059669,#10b981,#34d399);
+  -webkit-background-clip:text;
+  color: transparent;
 
--webkit-background-clip:text;
+  text-shadow: 0 0 6px rgba(16,185,129,0.35);
 
-color:transparent;
+  animation: colorShift 6s linear infinite;
+  transition:0.3s;
+}
 
-letter-spacing:1px;
+/* Hover */
+.navbar .logo-signature:hover{
+  transform: scale(1.08);
+}
 
+/* Dark Mode — Yellow Animated */
+[data-theme="dark"] .navbar .logo-signature{
+  background: linear-gradient(90deg,#eab308,#facc15,#fde047);
+  -webkit-background-clip:text;
+  color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(234,179,8,0.8),
+    0 0 22px rgba(234,179,8,0.6);
+
+  animation: colorShift 6s linear infinite;
 }
 
 /* Light Mode — Black */
