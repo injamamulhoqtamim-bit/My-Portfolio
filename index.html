@@ -299,7 +299,7 @@ class="text-xl sm:text-2xl md:text-4xl font-extrabold h-16">
           Hire Me
         </a>
 
-        <a href="./assets/cv.pdf" class="btn btn-outline btn-primary">
+        <a href="./assets/Portfolio CV.pdf" class="btn btn-outline btn-primary">
           Download CV
         </a>
 
@@ -1418,8 +1418,60 @@ Send Message
 </section>
 
 <!-- Footer -->
-<footer class="footer footer-center p-10 bg-base-200">
-  <p>© 2026 Injamamul Hoq | Web Developer</p>
+<!-- ===== ULTRA FOOTER (LEFT TEXT + LOGO + BOTTOM CENTER COPYRIGHT) ===== -->
+<footer class="relative w-full text-white overflow-hidden">
+
+  <!-- BIG HEIGHT -->
+  <div class="min-h-[420px] md:min-h-[520px] flex flex-col justify-between">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline
+      class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      
+      <source src="./assets/video b.mp4" type="video/mp4">
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/65 z-10"></div>
+
+    <!-- TOP LEFT CONTENT -->
+    <div class="relative z-20 max-w-6xl mx-auto px-6 w-full pt-16">
+
+      <div class="text-left">
+
+        <!-- IH Logo Badge -->
+        <div class="w-14 h-14 rounded-xl 
+                    bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600
+                    flex items-center justify-center 
+                    text-white font-bold text-xl shadow-lg mb-4">
+          IH
+        </div>
+
+        <!-- Name -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-2">
+          Injamamul Hoq
+        </h2>
+
+        <!-- Subtitle -->
+        <p class="text-gray-200 text-lg">
+          Frontend Developer • Cybersecurity Enthusiast
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM CENTER COPYRIGHT -->
+    <div class="relative z-20 w-full text-center pb-8 px-4">
+
+      <p class="text-gray-300 text-sm">
+        © 2026 Injamamul Hoq Tamim | Built with HTML, CSS & JavaScript
+      </p>
+
+    </div>
+
+  </div>
+
 </footer>
 
 <script>
