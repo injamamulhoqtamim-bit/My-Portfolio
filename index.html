@@ -156,7 +156,7 @@ color:#ff0000;
 }
 
 .uiux-text{
-  color:#ff69b4;
+  color:#f3439b;
 }
 
 [data-theme="dark"] .uiux-text{
@@ -1127,7 +1127,7 @@ window.addEventListener("scroll", revealCards);
 const texts = [
   { text: "Frontend Developer ", className: "frontend-text" },
   { text: "Cybersecurity Researcher", className: "cyber-text" },
-  { text: "UI/UX Designer", className: "frontend-text" } // 👈 new add
+  { text: "UI/UX Designer", className: "uiux-text" } // 👈 new add
 ];
 let count = 0;
 let index = 0;
@@ -1145,8 +1145,8 @@ let index = 0;
   typed.textContent = letter;
 
   // Apply correct class
-  heading.classList.remove("frontend-text","uiux-text");
-  heading.classList.add(current.className);
+  heading.classList.remove("frontend-text","uiux-text","cyber-text");
+heading.classList.add(current.className);
 
   if(letter.length === current.text.length){
 
