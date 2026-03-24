@@ -155,6 +155,14 @@ color:#ff0000;
 
 }
 
+.uiux-text{
+  color:#ff69b4;
+}
+
+[data-theme="dark"] .uiux-text{
+  color:#ff9cf5;
+}
+
 </style>
 
 </head>
@@ -1118,9 +1126,9 @@ window.addEventListener("scroll", revealCards);
 
 const texts = [
   { text: "Frontend Developer ", className: "frontend-text" },
-  { text: "Cybersecurity Researcher", className: "cyber-text" }
+  { text: "Cybersecurity Researcher", className: "cyber-text" },
+  { text: "UI/UX Designer", className: "frontend-text" } // 👈 new add
 ];
-
 let count = 0;
 let index = 0;
 
@@ -1137,7 +1145,7 @@ let index = 0;
   typed.textContent = letter;
 
   // Apply correct class
-  heading.classList.remove("frontend-text","cyber-text");
+  heading.classList.remove("frontend-text","uiux-text");
   heading.classList.add(current.className);
 
   if(letter.length === current.text.length){
@@ -1290,33 +1298,34 @@ View Certificate
 
 <!-- Contact Section -->
 <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="py-24 px-5 bg-base-100">
 
 <div class="text-center mb-16">
 
 <h2 class="text-4xl font-bold gradient-text">
-Contact Me
+Connected With Me
 </h2>
 
 <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
 
 </div>
 
-<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- CENTERED CONTAINER -->
+<div class="max-w-xl mx-auto">
 
-<!-- Contact Info Card -->
-<div class="space-y-4">
-     <!-- NEW TITLE -->
-  <h3 class="text-2xl font-bold gradient-text mb-4 text-center w-full">
-  Connected With Me
-</h3>
+<!-- Contact Info -->
+<div class="space-y-4 text-center">
+
+<!-- Title -->
+
 
 <!-- Email -->
 <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
 
 <div class="flex items-center gap-3">
 <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" 
-class="w-5 h-5 hover:scale-125 transition duration-300">
+class="w-5 h-5">
 <span>Email</span>
 </div>
 
@@ -1325,15 +1334,12 @@ Send Mail
 </a>
 
 </div>
-
-
-<!-- WhatsApp -->
 <!-- WhatsApp -->
 <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
 
 <div class="flex items-center gap-3">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-class="w-5 h-5 hover:scale-125 transition duration-300">
+class="w-5 h-5">
 <span>WhatsApp</span>
 </div>
 
@@ -1342,14 +1348,12 @@ Chat Now
 </a>
 
 </div>
-
-
 <!-- Facebook -->
 <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
 
 <div class="flex items-center gap-3">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" 
-class="w-5 h-5 hover:scale-125 transition duration-300">
+class="w-5 h-5">
 <span>Facebook</span>
 </div>
 
@@ -1359,13 +1363,12 @@ View Profile
 
 </div>
 
-
 <!-- LinkedIn -->
 <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
 
 <div class="flex items-center gap-3">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
-class="w-5 h-5 hover:scale-125 transition duration-300">
+class="w-5 h-5">
 <span>LinkedIn</span>
 </div>
 
@@ -1381,7 +1384,7 @@ Connect
 
 <div class="flex items-center gap-3">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-class="w-5 h-5 hover:scale-125 transition duration-300">
+class="w-5 h-5">
 <span>GitHub</span>
 </div>
 
@@ -1392,27 +1395,6 @@ View Projects
 </div>
 
 </div>
-
-
-<!-- Contact Form Card -->
-<div class="card bg-base-200 shadow-xl p-8">
-
-<h3 class="text-2xl font-bold mb-6 text-primary">
-Send Message
-</h3>
-
-<input class="input input-bordered w-full mb-4" placeholder="Name">
-
-<input class="input input-bordered w-full mb-4" placeholder="Email">
-
-<textarea class="textarea textarea-bordered w-full mb-4" placeholder="Message"></textarea>
-
-<button class="btn btn-primary w-full">
-Send Message
-</button>
-
-</div>
-
 </div>
 
 </section>
@@ -1525,51 +1507,29 @@ Send Message
 </footer>
 
 <script>
-// Dark/Light Mode Toggle
-// Dark/Light Mode Toggle
 const toggle = document.getElementById("theme-toggle");
 
-// default light mode
-document.documentElement.setAttribute("data-theme","light");
+// load saved theme
+if(localStorage.getItem("theme") === "dark"){
+  document.documentElement.setAttribute("data-theme","dark");
+  toggle.checked = true;
+} else {
+  document.documentElement.setAttribute("data-theme","light");
+}
 
 toggle.addEventListener("change", () => {
 
   if(toggle.checked){
     document.documentElement.setAttribute("data-theme","dark");
+    localStorage.setItem("theme","dark");
   } else {
     document.documentElement.setAttribute("data-theme","light");
+    localStorage.setItem("theme","light");
   }
 
 });
-
-
-
 </script>
-<script>
 
-const circles = document.querySelectorAll(".skill-circle");
-
-circles.forEach(circle => {
-
-let value = 0;
-let target = circle.getAttribute("data-value");
-
-let interval = setInterval(() => {
-
-value++;
-
-circle.style.setProperty("--value", value);
-circle.innerText = value + "%";
-
-if(value >= target){
-clearInterval(interval);
-}
-
-}, 20);
-
-});
-
-</script>
 
 <script>
 /* ===== Animated Counter ===== */
