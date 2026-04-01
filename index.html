@@ -170,11 +170,12 @@ color:#ff0000;
 
 <!-- Mobile menu button -->
 <div class="dropdown lg:hidden">
-  <label tabindex="0" class="btn btn-ghost">
+  <label tabindex="0" class="btn btn-ghost" id="menu-btn">
     ☰
   </label>
 
-  <ul tabindex="0" class="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+  <ul tabindex="0" class="menu dropdown-content mt-3 p-4 shadow bg-base-100 rounded-box w-52 relative">
+
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -182,8 +183,58 @@ color:#ff0000;
     <li><a href="#experience">Experience</a></li>
     <li><a href="#achievements">Achievements</a></li>
     <li><a href="#contact">Contact</a></li>
+
   </ul>
 </div>
+
+<!-- ===== JS for Menu Toggle ===== -->
+<script>
+let skillsAnimated = false;
+
+window.addEventListener("scroll", () => {
+
+  const skills = document.querySelector("#skills");
+  const position = skills.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3;
+
+  if(position < screenPosition && !skillsAnimated){
+    skillsAnimated = true;
+
+    // Title animation
+    document.querySelector(".skills-title")
+      .classList.remove("opacity-0","translate-y-10");
+
+    // Cards animation
+    const cards = document.querySelectorAll(".skill-card");
+    cards.forEach((card,i)=>{
+      setTimeout(()=>{
+        card.classList.remove("opacity-0","translate-y-10");
+      }, i*250);
+    });
+
+    // Circle meter animation
+    document.querySelectorAll(".skill-circle").forEach(circle=>{
+      let value = parseInt(circle.getAttribute("data-value"));
+      let start = 0;
+
+      let interval = setInterval(()=>{
+        if(start >= value){
+          clearInterval(interval);
+        } else {
+          start++;
+          circle.style.setProperty("--value", start);
+          circle.textContent = start + "%";
+        }
+      }, 15); // adjust speed here
+    });
+
+  }
+
+});
+</script>
+
+</body>
+</html>
 
 <!-- Developer Logo -->
 <a href="#home" class="dev-logo">
@@ -1412,7 +1463,7 @@ View Projects
     <video autoplay muted loop playsinline
       class="absolute top-0 left-0 w-full h-full object-cover z-0">
       
-      <source src="./assets/video b.mp4" type="video/mp4">
+      <source src="./assets/videod.mp4" type="video/mp4">
     </video>
 
     <!-- Dark Overlay -->
