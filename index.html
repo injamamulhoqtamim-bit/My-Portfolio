@@ -157,11 +157,36 @@ color:#ff0000;
   color:#ff9cf5;
 }
 
+/* Smooth fade out */
+#loader.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s ease;
+}
+
 </style>
 
 </head>
 
-<body class="bg-base-200 pt-16 overflow-x-hidden">
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-[99999]">
+
+  <div class="text-center">
+    
+    <!-- Spinner -->
+    <div class="w-16 h-16 border-4 border-t-cyan-400 border-r-blue-500 border-b-purple-500 border-l-transparent rounded-full animate-spin mx-auto"></div>
+
+    <!-- Text -->
+    <p class="text-white mt-4 text-lg tracking-widest">
+      Loading Portfolio...
+    </p>
+
+  </div>
+
+</div>
+
+<body class="bg-base-200 pt-16 overflow-x-hidden opacity-0 transition-opacity duration-700">
+  
 
 <!-- Navbar -->
 <div class="navbar bg-base-100 shadow-lg fixed top-0 left-0 w-full h-16 z-[9999]">
@@ -170,11 +195,11 @@ color:#ff0000;
 
 <!-- Mobile menu button -->
 <div class="dropdown lg:hidden">
-  <label tabindex="0" class="btn btn-ghost" id="menu-btn">
-    ☰
-  </label>
+  <label tabindex="0" class="btn btn-ghost text-2xl" id="menu-btn">
+  ☰
+</label>
 
-  <ul tabindex="0" class="menu dropdown-content mt-3 p-4 shadow bg-base-100 rounded-box w-52 relative">
+  <ul tabindex="0" class="menu dropdown-content mt-3 p-4 shadow bg-base-100 rounded-box w-52 relative hidden">
 
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -186,6 +211,26 @@ color:#ff0000;
 
   </ul>
 </div>
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const dropdown = document.querySelector(".dropdown-content");
+
+let isOpen = false;
+
+menuBtn.addEventListener("click", () => {
+  isOpen = !isOpen;
+
+  if(isOpen){
+    menuBtn.textContent = "✖"; // show X
+    dropdown.classList.add("block");
+    dropdown.classList.remove("hidden");
+  } else {
+    menuBtn.textContent = "☰"; // back to menu
+    dropdown.classList.add("hidden");
+  }
+});
+</script>
 
 <!-- ===== JS for Menu Toggle ===== -->
 <script>
@@ -457,20 +502,7 @@ class="w-7 h-7">
 
 </section>
 
-<!-- Animation Script -->
-<script>
 
-window.addEventListener("load", () => {
-
-  document.querySelector(".hero-left")
-  .classList.remove("opacity-0","-translate-x-32")
-
-  document.querySelector(".hero-right")
-  .classList.remove("opacity-0","translate-x-32")
-
-})
-
-</script>
 
 
 
@@ -934,67 +966,7 @@ window.addEventListener("scroll", revealProjects);
 </script>
 
 
-<script>
 
-let skillsAnimated = false;
-
-window.addEventListener("scroll", () => {
-
-const skills = document.querySelector("#skills")
-const position = skills.getBoundingClientRect().top
-const screenPosition = window.innerHeight / 1.3
-
-if(position < screenPosition && !skillsAnimated){
-
-skillsAnimated = true;
-
-/* title animation */
-
-document.querySelector(".skills-title")
-.classList.remove("opacity-0","translate-y-10")
-
-/* cards animation */
-
-const cards = document.querySelectorAll(".skill-card")
-
-cards.forEach((card,i)=>{
-
-setTimeout(()=>{
-card.classList.remove("opacity-0","translate-y-10")
-}, i*250)
-
-})
-
-/* circle meter animation */
-
-document.querySelectorAll(".skill-circle").forEach(circle=>{
-
-let value = circle.getAttribute("data-value")
-let start = 0
-
-let interval = setInterval(()=>{
-
-if(start >= value){
-
-clearInterval(interval)
-
-}else{
-
-start++
-circle.style.setProperty("--value",start)
-circle.textContent = start + "%"
-
-}
-
-},20)
-
-})
-
-}
-
-})
-
-</script>
 
 
 <!-- Education & Experience Section -->
@@ -1632,6 +1604,34 @@ window.addEventListener("scroll", () => {
     });
 
   }
+
+});
+</script>
+
+<script>
+window.addEventListener("load", () => {
+
+  const loader = document.getElementById("loader");
+  const body = document.body;
+
+  // Show loader for 1.5s
+  setTimeout(() => {
+
+    // Hide loader
+    loader.classList.add("hide");
+
+    // Show page smoothly
+    body.classList.remove("opacity-0");
+    body.classList.add("opacity-100");
+
+    // 👉 Trigger Hero animation AFTER loader
+    document.querySelector(".hero-left")
+      .classList.remove("opacity-0","-translate-x-32");
+
+    document.querySelector(".hero-right")
+      .classList.remove("opacity-0","translate-x-32");
+
+  }, 1500);
 
 });
 </script>
