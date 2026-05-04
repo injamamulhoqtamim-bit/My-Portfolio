@@ -164,6 +164,9 @@ color:#ff0000;
   transition: all 0.6s ease;
 }
 
+
+
+
 </style>
 
 </head>
@@ -667,122 +670,132 @@ window.addEventListener("scroll", () => {
 </script>
 
 <!-- Skills Section -->
+<!-- Skills Section -->
 <section id="skills" class="py-24 bg-base-200 px-5">
 
-<div class="max-w-6xl mx-auto">
+  <div class="max-w-5xl mx-auto">
 
-<!-- Title -->
-<div class="text-center mb-16 opacity-0 translate-y-10 transition-all duration-[1200ms] skills-title">
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold gradient-text">
+        My Skills
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+    </div>
 
-<h2 class="text-4xl font-bold gradient-text">
-My Skills
-</h2>
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 gap-8">
 
-<div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+      <!-- Frontend -->
+      <div class="bg-base-100 p-8 rounded-2xl shadow-xl border border-black">
 
-</div>
+        <h3 class="text-xl font-bold mb-2 text-center">
+          Frontend Developer
+        </h3>
 
+        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mb-6 rounded"></div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-2 gap-6">
 
-<!-- HTML -->
-<div class="card bg-base-100 shadow-xl p-8 items-center transition duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-orange-200 opacity-0 translate-y-10 skill-card">
+          <!-- Item -->
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">HTML5</p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-<div class="radial-progress text-orange-500 skill-circle animate-pulse"
-data-value="95"
-style="--value:0; --size:110px; --thickness:8px;">
-0%
-</div>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">Next.js</p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-<p class="mt-5 font-semibold flex items-center gap-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-5">
-HTML
-</p>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">TypeScript</p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-</div>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">Tailwind CSS</p>
+              <span class="text-sm text-gray-400">Intermediate</span>
+            </div>
+          </div>
 
-<!-- CSS -->
-<div class="card bg-base-100 shadow-xl p-8 items-center transition duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-blue-200 opacity-0 translate-y-10 skill-card">
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">JavaScript</p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-<div class="radial-progress text-blue-500 skill-circle animate-pulse"
-data-value="90"
-style="--value:0; --size:110px; --thickness:8px;">
-0%
-</div>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">React.js</p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-<p class="mt-5 font-semibold flex items-center gap-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-5">
-CSS / Tailwind
-</p>
+        </div>
+      </div>
 
-</div>
+      <!-- Backend -->
+      <div class="bg-base-100 p-8 rounded-2xl shadow-xl border border-black">
 
-<!-- JavaScript -->
-<div class="card bg-base-100 shadow-xl p-8 items-center transition duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-yellow-200 opacity-0 translate-y-10 skill-card">
+        <h3 class="text-xl font-bold mb-2 text-center">
+          Backend Developer
+        </h3>
 
-<div class="radial-progress text-yellow-500 skill-circle animate-pulse"
-data-value="85"
-style="--value:0; --size:110px; --thickness:8px;">
-0%
-</div>
+        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mb-6 rounded"></div>
 
-<p class="mt-5 font-semibold flex items-center gap-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-5">
-JavaScript
-</p>
+        <div class="grid grid-cols-2 gap-6">
 
-</div>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">Node.js</p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-<!-- React -->
-<div class="card bg-base-100 shadow-xl p-8 items-center transition duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-200 opacity-0 translate-y-10 skill-card">
+          
 
-<div class="radial-progress text-cyan-500 skill-circle animate-pulse"
-data-value="80"
-style="--value:0; --size:110px; --thickness:8px;">
-0%
-</div>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">Firebase </p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-<p class="mt-5 font-semibold flex items-center gap-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5">
-React
-</p>
+          
 
-</div>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">✔</span>
+            <div>
+              <p class="font-semibold">MongoDB</p>
+              <span class="text-sm text-gray-400">Expert</span>
+            </div>
+          </div>
 
-<!-- NodeJS -->
-<div class="card bg-base-100 shadow-xl p-8 items-center transition duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-green-200 opacity-0 translate-y-10 skill-card">
+          
 
-<div class="radial-progress text-green-500 skill-circle animate-pulse"
-data-value="70"
-style="--value:0; --size:110px; --thickness:8px;">
-0%
-</div>
+        </div>
+      </div>
 
-<p class="mt-5 font-semibold flex items-center gap-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-5">
-Node JS
-</p>
+    </div>
 
-</div>
-
-<!-- Cybersecurity -->
-<div class="card bg-base-100 shadow-xl p-8 items-center transition duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-200 opacity-0 translate-y-10 skill-card">
-
-<div class="radial-progress text-red-500 skill-circle animate-pulse"
-data-value="65"
-style="--value:0; --size:110px; --thickness:8px;">
-0%
-</div>
-
-<p class="mt-5 font-semibold flex items-center gap-2">
-🛡️ Cybersecurity
-</p>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
