@@ -281,8 +281,7 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-</body>
-</html>
+
 
 <!-- Developer Logo -->
 <a href="#home" class="dev-logo">
@@ -1414,101 +1413,123 @@ setInterval(createBubble, 600);
 <!-- Contact Section -->
 <section id="contact" class="py-24 px-5 bg-base-100">
 
-<div class="text-center mb-16">
+  <!-- Title -->
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold gradient-text">
+      Connected With Me
+    </h2>
+    <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+  </div>
 
-<h2 class="text-4xl font-bold gradient-text">
-Connected With Me
-</h2>
+  <!-- GRID -->
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
-<div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+    <!-- LEFT SIDE (Contact Info) -->
+    <div class="space-y-4">
+
+      <!-- Email -->
+      <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
+        <div class="flex items-center gap-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-5 h-5">
+          <span>Email</span>
+        </div>
+        <a href="mailto:injamamulhoqtamim@gmail.com" class="btn btn-xs btn-primary">
+          Send Mail
+        </a>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
+        <div class="flex items-center gap-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-5 h-5">
+          <span>WhatsApp</span>
+        </div>
+        <a href="https://wa.me/8801511994008" target="_blank" class="btn btn-xs btn-success">
+          Chat Now
+        </a>
+      </div>
+
+      <!-- Facebook -->
+      <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
+        <div class="flex items-center gap-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" class="w-5 h-5">
+          <span>Facebook</span>
+        </div>
+        <a href="#" class="btn btn-xs btn-info">View</a>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
+        <div class="flex items-center gap-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-5 h-5">
+          <span>LinkedIn</span>
+        </div>
+        <a href="#" class="btn btn-xs btn-secondary">Connect</a>
+      </div>
+
+      <!-- GitHub -->
+      <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
+        <div class="flex items-center gap-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-5 h-5">
+          <span>GitHub</span>
+        </div>
+        <a href="#" class="btn btn-xs btn-neutral">View</a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (FORM CARD LIKE IMAGE) -->
+    <!-- RIGHT SIDE (FORM CARD LIKE IMAGE) -->
+<div class="bg-gradient-to-br from-[#1e293b] to-[#0f172a] p-8 rounded-2xl shadow-2xl border border-purple-500">
+
+  <div class="grid grid-cols-2 gap-5">
+
+    <!-- Name -->
+    <div>
+      <label class="text-white font-bold mb-1 block">Name</label>
+      <input id="nameInput" type="text" placeholder="John Carter"
+class="input input-bordered w-full bg-transparent border-pink-500 text-white placeholder-gray-400">
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label class="text-white font-bold mb-1 block">Email</label>
+     <input id="emailInput" type="email" placeholder="example@email.com"
+class="input input-bordered w-full bg-transparent border-blue-500 text-white placeholder-gray-400">
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label class="text-white font-bold mb-1 block">Phone</label>
+   <input id="phoneInput" type="text" placeholder="(123) 456 - 789"
+class="input input-bordered w-full bg-transparent border-blue-500 text-white placeholder-gray-400">
+    </div>
+
+    <!-- Company -->
+    <div>
+      <label class="text-white font-bold mb-1 block">Company</label>
+      <input id="companyInput" type="text" placeholder="Facebook"
+class="input input-bordered w-full bg-transparent border-pink-500 text-white placeholder-gray-400">
+    </div>
+
+  </div>
+
+  <!-- Message -->
+  <div class="mt-5">
+    <label class="text-white font-bold mb-1 block">Message</label>
+  <textarea id="messageInput" placeholder="Please type your message here..."
+class="textarea textarea-bordered w-full bg-transparent border-blue-500 text-white placeholder-gray-400 h-32"></textarea>
+  </div>
+
+  <!-- Button -->
+  <button id="Btn" class="w-full mt-6 py-3 rounded-full text-white font-semibold
+    bg-gradient-to-r from-blue-500 to-pink-500 hover:scale-105 transition">
+    Send message
+  </button>
 
 </div>
 
-<!-- CENTERED CONTAINER -->
-<div class="max-w-xl mx-auto">
-
-<!-- Contact Info -->
-<div class="space-y-4 text-center">
-
-<!-- Title -->
-
-
-<!-- Email -->
-<div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
-
-<div class="flex items-center gap-3">
-<img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" 
-class="w-5 h-5">
-<span>Email</span>
-</div>
-
-<a href="mailto:injamamulhoqtamim@gmail.com" class="btn btn-xs btn-primary">
-Send Mail
-</a>
-
-</div>
-<!-- WhatsApp -->
-<div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
-
-<div class="flex items-center gap-3">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-class="w-5 h-5">
-<span>WhatsApp</span>
-</div>
-
-<a href="https://wa.me/8801511994008" target="_blank" class="btn btn-xs btn-success">
-Chat Now
-</a>
-
-</div>
-<!-- Facebook -->
-<div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
-
-<div class="flex items-center gap-3">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" 
-class="w-5 h-5">
-<span>Facebook</span>
-</div>
-
-<a href="https://www.facebook.com/injamamulo" target="_blank" class="btn btn-xs btn-info">
-View Profile
-</a>
-
-</div>
-
-<!-- LinkedIn -->
-<div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
-
-<div class="flex items-center gap-3">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
-class="w-5 h-5">
-<span>LinkedIn</span>
-</div>
-
-<a href="https://www.linkedin.com/in/injamamul-hoq-tamim/" target="_blank" class="btn btn-xs btn-secondary">
-Connect
-</a>
-
-</div>
-
-
-<!-- GitHub -->
-<div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
-
-<div class="flex items-center gap-3">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-class="w-5 h-5">
-<span>GitHub</span>
-</div>
-
-<a href="https://github.com/injamamulhoqtamim-bit" target="_blank" class="btn btn-xs btn-neutral">
-View Projects
-</a>
-
-</div>
-
-</div>
-</div>
+  </div>
 
 </section>
 
@@ -1755,6 +1776,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("imrQPuI2hAA9fAdXy"); // dashboard থেকে নাও
+})();
+</script>
+
+
+<script>
+document.getElementById("Btn").addEventListener("click", function(){
+
+  const name = document.getElementById("nameInput").value;
+  const email = document.getElementById("emailInput").value;
+  const phone = document.getElementById("phoneInput").value;
+  const company = document.getElementById("companyInput").value;
+  const message = document.getElementById("messageInput").value;
+
+  const params = {
+    name: name,
+    email: email,
+    phone: phone,
+    company: company,
+    message: message
+  };
+
+  emailjs.send("service_6br0uua", "template_ojpk9ab", params)
+  .then(function(response){
+    alert("✅ Message sent successfully!");
+  }, function(error){
+    alert("❌ Failed to send message");
+  });
+
+});
+</script>
+
+
 
 
 <script src="script.js"></script>
