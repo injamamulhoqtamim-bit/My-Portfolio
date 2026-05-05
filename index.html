@@ -1516,101 +1516,72 @@ View Projects
 <!-- ===== ULTRA RESPONSIVE VIDEO FOOTER ===== -->
 <footer class="relative w-full text-white overflow-hidden">
 
-  <!-- BIG HEIGHT -->
-  <div class="min-h-[460px] md:min-h-[520px] flex flex-col justify-between">
+  <!-- HEIGHT -->
+  <div class="min-h-[500px] flex flex-col justify-between">
 
     <!-- Background Video -->
     <video autoplay muted loop playsinline
       class="absolute top-0 left-0 w-full h-full object-cover z-0">
-      
       <source src="./assets/videod.mp4" type="video/mp4">
     </video>
 
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-black/65 z-10"></div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 z-10"></div>
 
-    <!-- ===== TOP CONTENT ===== -->
-    <div class="relative z-20 max-w-6xl mx-auto px-6 w-full pt-16
-                flex flex-col md:flex-row md:justify-between
-                items-center md:items-start gap-12">
+    <!-- CONTENT -->
+    <div class="relative z-20 max-w-6xl mx-auto px-6 pt-20 pb-10 w-full">
 
-      <!-- ===== LEFT SIDE ===== -->
-      <div class="text-center md:text-left">
+      <!-- BIG NAME (LIKE LEO CARTER) -->
+      <h1 class="text-5xl md:text-7xl font-bold text-center tracking-widest 
+      bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent mb-10">
+        INJAMAMUL HOQ
+      </h1>
 
-        <!-- IH Logo -->
-        <div class="w-14 h-14 rounded-xl 
-                    bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600
-                    flex items-center justify-center 
-                    text-white font-bold text-xl shadow-lg mb-4 mx-auto md:mx-0">
-          IH
-        </div>
-
-        <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          Injamamul Hoq
-        </h2>
-
-        <p class="text-gray-200 text-lg">
-          Frontend Developer • Cybersecurity Enthusiast
-        </p>
-
+      <!-- NAV LINKS -->
+      <div class="flex justify-center gap-8 text-gray-300 text-lg mb-10">
+        <a href="#home" class="hover:text-white transition">Home</a>
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#projects" class="hover:text-white transition">Work</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
       </div>
 
-      <!-- ===== RIGHT SIDE (FOLLOW ME) ===== -->
-      <div class="text-center md:text-right w-full md:w-auto">
+      <!-- SOCIAL ICONS (EMOJI + STYLE SAME KEEP) -->
+      <!-- SOCIAL ICONS -->
+<div class="flex justify-center gap-6 mb-10 text-2xl">
 
-        <!-- Title -->
-        <h3 class="text-3xl font-bold mb-6 inline-block">
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/injamamul-hoq-tamim/" target="_blank"
+     class="w-14 h-14 rounded-full border border-blue-400 flex items-center justify-center 
+     hover:bg-blue-500 transition duration-300">
+    
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+         class="w-6 h-6">
+  </a>
 
-          <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 
-                       bg-clip-text text-transparent drop-shadow-lg">
-            Follow Me
-          </span>
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/injamamulo" target="_blank"
+     class="w-14 h-14 rounded-full border border-blue-400 flex items-center justify-center 
+     hover:bg-blue-600 transition duration-300">
+    
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
+         class="w-6 h-6">
+  </a>
 
-          <span class="block h-1 w-24 mx-auto md:ml-auto mt-2 rounded-full
-                       bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500
-                       shadow-[0_0_12px_rgba(59,130,246,0.8)]">
-          </span>
+  <!-- GitHub -->
+  <!-- GitHub -->
+<a href="https://github.com/injamamulhoqtamim-bit" target="_blank"
+   class="w-14 h-14 rounded-full border border-blue-400 flex items-center justify-center 
+   hover:bg-gray-700 transition duration-300">
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+       class="w-6 h-6 invert">
+</a>
 
-        </h3>
+</div>
 
-        <!-- Social Links -->
-        <div class="flex flex-col items-center md:items-end gap-4 text-lg">
-
-          <a href="https://github.com/injamamulhoqtamim-bit"
-             target="_blank"
-             class="flex items-center gap-2 hover:text-blue-400 transition hover:scale-110">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                 class="w-6 h-6">
-            <span>GitHub</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/injamamul-hoq-tamim/"
-             target="_blank"
-             class="flex items-center gap-2 hover:text-blue-400 transition hover:scale-110">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                 class="w-6 h-6">
-            <span>LinkedIn</span>
-          </a>
-
-          <a href="https://www.facebook.com/injamamulo"
-             target="_blank"
-             class="flex items-center gap-2 hover:text-blue-400 transition hover:scale-110">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
-                 class="w-6 h-6">
-            <span>Facebook</span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- ===== BOTTOM COPYRIGHT ===== -->
-    <div class="relative z-20 w-full text-center pb-8 px-4">
-
-      <p class="text-gray-300 text-sm">
-        © 2026 Injamamul Hoq Tamim | Built with HTML, CSS & JavaScript
+      <!-- BOTTOM TEXT -->
+      <p class="text-center text-gray-400 text-sm">
+        © 2026 Injamamul Hoq Tamim | Built with ❤️ HTML, CSS & JavaScript
       </p>
 
     </div>
