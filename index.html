@@ -1799,32 +1799,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script>
 (function(){
-  emailjs.init("imrQPuI2hAA9fAdXy"); // dashboard থেকে নাও
+  emailjs.init("imrQPuI2hAA9fAdXy");
 })();
-</script>
 
-
-<script>
 document.getElementById("Btn").addEventListener("click", function(){
 
-  const name = document.getElementById("nameInput").value;
-  const email = document.getElementById("emailInput").value;
-  const phone = document.getElementById("phoneInput").value;
-  const company = document.getElementById("companyInput").value;
-  const message = document.getElementById("messageInput").value;
-
   const params = {
-    name: name,
-    email: email,
-    phone: phone,
-    company: company,
-    message: message
+    name: document.getElementById("nameInput").value,
+    email: document.getElementById("emailInput").value,
+    phone: document.getElementById("phoneInput").value,
+    company: document.getElementById("companyInput").value,
+    message: document.getElementById("messageInput").value
   };
 
-  emailjs.send("service_6br0uua", "template_ojpk9ab", params)
-  .then(function(response){
+  // 1️⃣ SEND TO YOU (ADMIN MAIL)
+  emailjs.send("service_8lcamww", "template_guzht8k", params)
+
+  // 2️⃣ THEN SEND AUTO REPLY TO CLIENT
+  .then(function(){
+    return emailjs.send("service_8lcamww", "template_zcy89fa", params);
+  })
+
+  // SUCCESS
+  .then(function(){
     alert("✅ Message sent successfully!");
-  }, function(error){
+
+    // form clear
+    document.getElementById("nameInput").value = "";
+    document.getElementById("emailInput").value = "";
+    document.getElementById("phoneInput").value = "";
+    document.getElementById("companyInput").value = "";
+    document.getElementById("messageInput").value = "";
+  })
+
+  // ERROR
+  .catch(function(error){
+    console.log(error);
     alert("❌ Failed to send message");
   });
 
