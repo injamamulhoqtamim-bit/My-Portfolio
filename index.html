@@ -166,6 +166,38 @@ color:#ff0000;
 
 
 
+.tech-circle{
+  width:70px;
+  height:70px;
+  background:white;
+  border:2px solid #070707; /* blue */
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:12px;
+  transition:0.3s;
+}
+
+.tech-circle img{
+  width:32px;
+  height:32px;
+}
+
+.tech-circle:hover{
+  transform:translateY(-5px) scale(1.05);
+  box-shadow:0 10px 20px rgba(59,130,246,0.3);
+}
+
+.tech-name{
+  margin-top:8px;
+  font-size:14px;
+  color:#555;
+}
+
+
 
 </style>
 
@@ -202,17 +234,16 @@ color:#ff0000;
   ☰
 </label>
 
-  <ul tabindex="0" class="menu dropdown-content mt-3 p-4 shadow bg-base-100 rounded-box w-52 relative hidden">
-
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#contact">Contact</a></li>
-
-  </ul>
+  <ul class="menu dropdown-content mt-3 p-4 shadow bg-base-100 rounded-box w-52 relative hidden">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#technologies">Technologies</a></li> <!-- ✅ ADD -->
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#achievements">Achievements</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
 </div>
 
 <script>
@@ -304,6 +335,7 @@ Injamamul Hoq
     <ul class="menu menu-horizontal hidden lg:flex px-1">
   <li><a href="#home">Home</a></li>
   <li><a href="#about">About</a></li>
+  <li><a href="#technologies">Technologies</a></li> <!-- ✅ ADD THIS -->
   <li><a href="#skills">Skills</a></li>
   <li><a href="#projects">Projects</a></li>
   <li><a href="#experience">Experience</a></li>
@@ -525,26 +557,16 @@ class="w-7 h-7">
     <!-- Text -->
     <div class="opacity-0 translate-x-32 transition-all duration-[1500ms] ease-out about-right">
 
-      <div class="text-center mb-16">
+      <div class="text-center mb-10">
 
-<h2 class="text-4xl font-bold gradient-text">
-About Me
-</h2>
+  <h2 class="text-4xl font-bold gradient-text">
+    About Me
+  </h2>
 
-<div class="sound-wave">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-<div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+  <!-- Small subtitle -->
+  <p class="text-gray-500 mt-3 text-sm tracking-wide">
+    My Introduction
+  </p>
 
 </div>
 
@@ -668,6 +690,105 @@ window.addEventListener("scroll", () => {
 
 </script>
 
+
+
+<!-- Technologies Section -->
+<section id="technologies" class="py-24 bg-base-100 px-5">
+
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold gradient-text">
+        Technologies
+      </h2>
+
+      <p class="text-gray-500 mt-3 text-sm tracking-wide">
+        My Tech Stack
+      </p>
+    </div>
+
+    <!-- Tech Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 justify-items-center">
+
+      <!-- ITEM -->
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        </div>
+        <p class="tech-name">JavaScript</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+        </div>
+        <p class="tech-name">React</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+        </div>
+        <p class="tech-name">Node.js</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg">
+        </div>
+        <p class="tech-name">Next.js</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+        </div>
+        <p class="tech-name">MongoDB</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg">
+        </div>
+        <p class="tech-name">Tailwind CSS</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+        </div>
+        <p class="tech-name">Git</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://react-hook-form.com/images/logo/react-hook-form-logo-only.svg">
+        </div>
+        <p class="tech-name">React Hook Form</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4">
+        </div>
+        <p class="tech-name">Better Auth</p>
+      </div>
+
+      <div class="flex flex-col items-center group">
+        <div class="tech-circle">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+        </div>
+        <p class="tech-name">GitHub</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 <!-- Skills Section -->
 <!-- Skills Section -->
 <section id="skills" class="py-24 bg-base-200 px-5">
@@ -679,7 +800,10 @@ window.addEventListener("scroll", () => {
       <h2 class="text-4xl font-bold gradient-text">
         My Skills
       </h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+
+      <p class="text-gray-500 mt-3 text-sm tracking-wide">
+        My Technical Levels
+      </p>
     </div>
 
     <!-- Cards -->
@@ -804,9 +928,14 @@ window.addEventListener("scroll", () => {
   <div class="max-w-6xl mx-auto">
 
     <!-- Title -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold gradient-text">My Projects</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+   <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold gradient-text">
+        My Projects
+      </h2>
+
+      <p class="text-gray-500 mt-3 text-sm tracking-wide">
+        Recent Projects
+      </p>
     </div>
 
     <!-- SLIDER -->
@@ -1068,14 +1197,14 @@ window.addEventListener("scroll", revealProjects);
 
 <!-- Title -->
 <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold gradient-text">
+        Education & Experience
+      </h2>
 
-<h2 class="text-4xl font-bold gradient-text">
-Education & Experience
-</h2>
-
-<div class="w-28 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
-
-</div>
+      <p class="text-gray-500 mt-3 text-sm tracking-wide">
+        My Journey 
+      </p>
+    </div>
 
 <!-- Timeline -->
 <div class="relative border-l-4 border-blue-500 ml-6 space-y-12">
@@ -1170,6 +1299,8 @@ Self Learning | 2024 - Present
 </div>
 
 </section>
+
+
 
 <!-- Scroll Animation CSS -->
 <style>
@@ -1316,11 +1447,14 @@ setInterval(createBubble, 600);
   <div class="max-w-6xl mx-auto">
 
     <!-- Title -->
-    <div class="text-center mb-16">
+   <div class="text-center mb-16">
       <h2 class="text-4xl font-bold gradient-text">
         Achievements / Certificates
       </h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
+
+      <p class="text-gray-500 mt-3 text-sm tracking-wide">
+        My Certifications 
+      </p>
     </div>
 
     <!-- Certificate Cards -->
@@ -1418,12 +1552,15 @@ setInterval(createBubble, 600);
 <section id="contact" class="py-24 px-5 bg-base-100">
 
   <!-- Title -->
-  <div class="text-center mb-16">
-    <h2 class="text-4xl font-bold gradient-text">
-      Connected With Me
-    </h2>
-    <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-auto mt-4 rounded"></div>
-  </div>
+ <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold gradient-text">
+        Connected With Me
+      </h2>
+
+      <p class="text-gray-500 mt-3 text-sm tracking-wide">
+        Get In Touch 
+      </p>
+    </div>
 
   <!-- GRID -->
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
@@ -1434,7 +1571,7 @@ setInterval(createBubble, 600);
   
   <!-- Heading -->
   <h3 class="text-2xl font-bold mb-6 text-primary text-center">
-    Contact Information
+    Talk To Me
   </h3>
 
     <div class="space-y-4">
@@ -1479,14 +1616,7 @@ setInterval(createBubble, 600);
         <a href="#" class="btn btn-xs btn-secondary">Connect</a>
       </div>
 
-      <!-- GitHub -->
-      <div class="flex justify-between items-center bg-base-200 p-3 rounded-lg">
-        <div class="flex items-center gap-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-5 h-5">
-          <span>GitHub</span>
-        </div>
-        <a href="#" class="btn btn-xs btn-neutral">View</a>
-      </div>
+      
 
     </div>
   </div>
@@ -1498,7 +1628,7 @@ setInterval(createBubble, 600);
     
   <!-- Heading -->
   <h3 class="text-2xl font-bold mb-6 text-primary text-center">
-    Let's Talk Business
+    Write Me Your Project
   </h3>
 
     <div class="bg-gradient-to-br from-[#1e293b] to-[#0f172a] p-8 rounded-2xl shadow-2xl border border-purple-500">
