@@ -217,10 +217,26 @@ color:#ff0000;
 
 .ticker span{
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: #e2e8f0;
-  padding-right: 50px;
+
+  margin-right: 15px;
+  padding: 6px 14px;
+
+  border-radius: 999px; /* pill shape */
+  border: 1px solid rgba(167, 233, 44, 0.2);
+
+  background: rgba(78, 97, 15, 0.05);
+  backdrop-filter: blur(6px);
+
+  transition: 0.3s;
+}
+
+.ticker span:hover{
+  background: linear-gradient(90deg,#04f34f,#fc3d3d,#f9e82c);
+  color: white;
+  transform: scale(1.05);
 }
 
 /* Animation */
