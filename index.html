@@ -294,9 +294,10 @@ color:#ff0000;
   <ul class="menu dropdown-content mt-3 p-4 shadow bg-base-100 rounded-box w-52 relative hidden">
   <li><a href="#home">Home</a></li>
   <li><a href="#about">About</a></li>
-  <li><a href="#technologies">Technologies</a></li> <!-- ✅ ADD -->
+  <li><a href="#technologies">Technologies</a></li>
   <li><a href="#skills">Skills</a></li>
   <li><a href="#projects">Projects</a></li>
+  <li><a href="#upcoming-project">Upcoming</a></li>   <!-- ✅ Added -->
   <li><a href="#experience">Experience</a></li>
   <li><a href="#achievements">Achievements</a></li>
   <li><a href="#contact">Contact</a></li>
@@ -392,9 +393,10 @@ Injamamul Hoq
     <ul class="menu menu-horizontal hidden lg:flex px-1">
   <li><a href="#home">Home</a></li>
   <li><a href="#about">About</a></li>
-  <li><a href="#technologies">Technologies</a></li> <!-- ✅ ADD THIS -->
+  <li><a href="#technologies">Technologies</a></li>
   <li><a href="#skills">Skills</a></li>
   <li><a href="#projects">Projects</a></li>
+  <li><a href="#upcoming-project">Upcoming</a></li>   <!-- ✅ Added -->
   <li><a href="#experience">Experience</a></li>
   <li><a href="#achievements">Achievements</a></li>
   <li><a href="#contact">Contact</a></li>
@@ -1234,114 +1236,182 @@ Access protected product details pages.</p>
 
 
 
-
-<!-- ===== CURRENT PROJECT STATUS SECTION ===== -->
-<section id="current-project" class="py-24 bg-base-200 px-5">
-
-  <div class="max-w-6xl mx-auto">
+<!-- ===== Upcoming Project Section ===== -->
+<section id="upcoming-project" class="py-20 md:py-28 bg-base-200 px-4 sm:px-5">
+  <div class="max-w-5xl mx-auto">
 
     <!-- Title -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold gradient-text">
-        Current Project Status
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text tracking-tight">
+        Upcoming Project
       </h2>
-
-      <p class="text-gray-500 mt-3 text-sm tracking-wide">
-        Projects I'm Currently Working On
+      <p class="text-gray-500 mt-3 text-base md:text-lg tracking-wide">
+        Currently Working On
       </p>
     </div>
 
-    <!-- STATUS CARD -->
-    <div class="bg-base-100 rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2 gap-8 items-center p-6 md:p-10">
+    <!-- Main Project Card -->
+    <div class="bg-base-100 rounded-3xl shadow-2xl overflow-hidden border border-base-300">
 
-      <!-- LEFT IMAGE -->
-      <div class="relative">
+      <!-- Image Section (Top) -->
+      <div class="relative group overflow-hidden h-[320px] sm:h-[380px] md:h-[460px] lg:h-[500px]">
+        <img src="./assets/ghurobangla.png"
+             alt="Ghuro Bangla Project"
+             class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
 
-        <img src="./assets/upcoming-project.jpg"
-             alt="Upcoming Project"
-             class="rounded-2xl w-full h-[300px] object-cover shadow-xl">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
-        <!-- STATUS BADGE -->
-        <div class="absolute top-4 left-4">
-          <span class="px-4 py-2 rounded-full text-sm font-semibold
-          bg-yellow-400 text-black shadow-lg animate-pulse">
-            🚧 In Progress
+        <!-- Status Badge -->
+        <div class="absolute top-4 left-4 sm:top-6 sm:left-6">
+          <span class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-yellow-400 text-black font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 animate-pulse">
+            🚧 In Development
           </span>
         </div>
 
+        <!-- Bottom Label -->
+        <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+          <p class="text-white text-base sm:text-lg font-semibold">
+            Tourism Platform for Bangladesh
+          </p>
+        </div>
       </div>
 
-      <!-- RIGHT CONTENT -->
-      <div>
+      <!-- Content Section -->
+      <div class="p-6 sm:p-8 md:p-12 lg:p-16">
 
-        <h3 class="text-3xl font-bold text-primary mb-4">
-          Nexus Commerce Platform
+        <h3 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+          Ghuro Bangla
         </h3>
 
-        <p class="text-gray-500 leading-relaxed mb-5">
-          I am currently working on a modern full-stack e-commerce platform.
-          This project includes secure authentication, admin dashboard,
-          order management, payment integration, and a fully responsive user interface.
+        <p class="text-gray-600 leading-relaxed text-[16px] md:text-[17px] mb-10">
+          Ghuro Bangla is a modern Tour & Travel platform designed to help users 
+          explore the beautiful destinations across Bangladesh with ease.
         </p>
 
-        <!-- Progress -->
-        <div class="mb-5">
-
-          <div class="flex justify-between mb-2">
-            <span class="font-semibold">Project Progress</span>
-            <span class="text-primary font-bold">70%</span>
+        <!-- FEATURES -->
+        <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-10">
+          <!-- Tour Packages -->
+          <div class="bg-base-200 hover:bg-base-300 p-4 sm:p-5 rounded-2xl flex items-start gap-3 sm:gap-4 transition-all hover:-translate-y-1">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 4.01V8" />
+              </svg>
+            </div>
+            <span class="font-medium text-sm sm:text-base mt-0.5">Tour Packages</span>
           </div>
 
-          <progress class="progress progress-primary w-full" value="70" max="100"></progress>
+          <!-- Hotel Booking -->
+          <div class="bg-base-200 hover:bg-base-300 p-4 sm:p-5 rounded-2xl flex items-start gap-3 sm:gap-4 transition-all hover:-translate-y-1">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 01-2-2H7a2 2 0 01-2 2v16m14 0h-4m-6 0H5" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6" />
+              </svg>
+            </div>
+            <span class="font-medium text-sm sm:text-base mt-0.5">Hotel Booking</span>
+          </div>
 
+          <!-- Destination Guide -->
+          <div class="bg-base-200 hover:bg-base-300 p-4 sm:p-5 rounded-2xl flex items-start gap-3 sm:gap-4 transition-all hover:-translate-y-1">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4" />
+              </svg>
+            </div>
+            <span class="font-medium text-sm sm:text-base mt-0.5">Destination Guide</span>
+          </div>
+
+          <!-- Responsive Design -->
+          <div class="bg-base-200 hover:bg-base-300 p-4 sm:p-5 rounded-2xl flex items-start gap-3 sm:gap-4 transition-all hover:-translate-y-1">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="font-medium text-sm sm:text-base mt-0.5">Responsive Design</span>
+          </div>
         </div>
 
-        <!-- Tech Stack -->
-        <div class="flex flex-wrap gap-2 mb-6">
-
-          <span class="btn btn-xs btn-outline">Next.js</span>
-          <span class="btn btn-xs btn-outline">MongoDB</span>
-          <span class="btn btn-xs btn-outline">Tailwind CSS</span>
-          <span class="btn btn-xs btn-outline">Firebase</span>
-          <span class="btn btn-xs btn-outline">JWT Auth</span>
-
+        <!-- TECH STACK -->
+        <div class="mb-10">
+          <p class="text-xs sm:text-sm uppercase tracking-widest text-gray-500 mb-3">Tech Stack</p>
+          <div class="flex flex-wrap gap-2 sm:gap-3">
+            <span class="badge badge-outline badge-md sm:badge-lg">React.js</span>
+            <span class="badge badge-outline badge-md sm:badge-lg">Tailwind CSS</span>
+            <span class="badge badge-outline badge-md sm:badge-lg">Node.js</span>
+            <span class="badge badge-outline badge-md sm:badge-lg">MongoDB</span>
+            <span class="badge badge-outline badge-md sm:badge-lg">Better Auth</span>
+          </div>
         </div>
 
-        <!-- Buttons -->
-        <div class="flex flex-wrap gap-4">
-
-          <!-- LIVE LINK -->
-          <a href="https://your-working-project-link.com"
-             target="_blank"
-             class="btn btn-primary hover:scale-105 transition">
-
-            Live Preview
-
+        <!-- BUTTONS -->
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#" class="btn btn-primary btn-md sm:btn-lg px-8 sm:px-10 rounded-2xl text-center">
+            Coming Soon
           </a>
-
-          <!-- GITHUB -->
-          <a href="https://github.com/yourgithub/project"
-             target="_blank"
-             class="btn btn-outline btn-primary hover:scale-105 transition">
-
-            GitHub Repo
-
-          </a>
-
+          <button onclick="showProgressModal()" 
+                  class="btn btn-outline btn-md sm:btn-lg px-8 sm:px-10 rounded-2xl">
+            View Progress →
+          </button>
         </div>
-
-        <!-- NOTE -->
-        <p class="text-xs text-gray-400 mt-5 italic">
-          Once the project is completed, it will be added to the "My Projects" section.
-        </p>
 
       </div>
+    </div>
+  </div>
+</section>
 
+
+<!-- Progress Modal -->
+<div id="progressModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+  <div class="bg-base-100 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+    
+    <!-- Modal Header -->
+    <!-- Modal Header - No Title -->
+<div class="flex justify-end items-center p-6 sm:p-8 border-b border-base-300 bg-base-200">
+  <button onclick="closeProgressModal()" 
+          class="text-4xl leading-none text-gray-400 hover:text-red-500 transition-colors w-10 h-10 flex items-center justify-center">
+    ×
+  </button>
+</div>
+
+    <!-- Image Gallery -->
+    <div class="p-6 overflow-y-auto max-h-[70vh] grid grid-cols-1 md:grid-cols-2 gap-6">
+      <img src="./ghurobangla picture details/1777408046642.png" alt="Progress 1" class="rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+      <img src="./ghurobangla picture details/1777408273638.png" alt="Progress 2" class="rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+      <img src="./ghurobangla picture details/1777408364568.png" alt="Progress 3" class="rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+      <img src="./ghurobangla picture details/1777408537871.png" alt="Progress 4" class="rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+      <img src="./ghurobangla picture details/1777408719609.png" alt="Progress 4" class="rounded-2xl shadow-md hover:shadow-xl transition-shadow">
     </div>
 
+    <div class="p-6 border-t border-base-300 text-center">
+      <button onclick="closeProgressModal()" 
+              class="btn btn-outline px-8">Close</button>
+    </div>
   </div>
+</div>
 
-</section>
+<!-- JavaScript -->
+<script>
+function showProgressModal() {
+  document.getElementById('progressModal').classList.remove('hidden');
+  document.getElementById('progressModal').classList.add('flex');
+}
+
+function closeProgressModal() {
+  const modal = document.getElementById('progressModal');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+}
+
+// Close modal when clicking outside the content
+document.getElementById('progressModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeProgressModal();
+  }
+});
+</script>
+
+
 
 <!-- Project Animation Style -->
 <style>
