@@ -203,10 +203,11 @@ color:#ff0000;
 .ticker-wrapper{
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(to right, #0f172a, #1e293b);
+  background: #ffffff;   /* White Background */
   padding: 12px 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #fefeff;
 }
 
 .ticker{
@@ -219,7 +220,7 @@ color:#ff0000;
   white-space: nowrap;
   font-size: 14px;
   font-weight: 600;
-  color: #e2e8f0;
+  color: #150473;
 
   margin-right: 15px;
   padding: 6px 14px;
@@ -234,7 +235,7 @@ color:#ff0000;
 }
 
 .ticker span:hover{
-  background: linear-gradient(90deg,#04f34f,#fc3d3d,#f9e82c);
+  background: linear-gradient(90deg,#049bf3,#490097,#4f21f5);
   color: white;
   transform: scale(1.05);
 }
@@ -561,7 +562,7 @@ class="w-7 h-7">
     <span>HTML •</span>
     <span>CSS •</span>
   <span>JavaScript •</span>
-  <span>React •</span>
+  <span>React.js •</span>
   <span>Node.js •</span>
   <span>Next.js •</span>
   <span>MongoDB •</span>
@@ -580,7 +581,7 @@ class="w-7 h-7">
     <span>HTML •</span>
     <span>CSS •</span> 
     <span>JavaScript •</span>
-  <span>React •</span>
+  <span>React.js •</span>
   <span>Node.js •</span>
   <span>Next.js •</span>
   <span>MongoDB •</span>
@@ -1229,6 +1230,117 @@ Access protected product details pages.</p>
     </div>
 
   </div>
+</section>
+
+
+
+
+<!-- ===== CURRENT PROJECT STATUS SECTION ===== -->
+<section id="current-project" class="py-24 bg-base-200 px-5">
+
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold gradient-text">
+        Current Project Status
+      </h2>
+
+      <p class="text-gray-500 mt-3 text-sm tracking-wide">
+        Projects I'm Currently Working On
+      </p>
+    </div>
+
+    <!-- STATUS CARD -->
+    <div class="bg-base-100 rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2 gap-8 items-center p-6 md:p-10">
+
+      <!-- LEFT IMAGE -->
+      <div class="relative">
+
+        <img src="./assets/upcoming-project.jpg"
+             alt="Upcoming Project"
+             class="rounded-2xl w-full h-[300px] object-cover shadow-xl">
+
+        <!-- STATUS BADGE -->
+        <div class="absolute top-4 left-4">
+          <span class="px-4 py-2 rounded-full text-sm font-semibold
+          bg-yellow-400 text-black shadow-lg animate-pulse">
+            🚧 In Progress
+          </span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div>
+
+        <h3 class="text-3xl font-bold text-primary mb-4">
+          Nexus Commerce Platform
+        </h3>
+
+        <p class="text-gray-500 leading-relaxed mb-5">
+          I am currently working on a modern full-stack e-commerce platform.
+          This project includes secure authentication, admin dashboard,
+          order management, payment integration, and a fully responsive user interface.
+        </p>
+
+        <!-- Progress -->
+        <div class="mb-5">
+
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold">Project Progress</span>
+            <span class="text-primary font-bold">70%</span>
+          </div>
+
+          <progress class="progress progress-primary w-full" value="70" max="100"></progress>
+
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="flex flex-wrap gap-2 mb-6">
+
+          <span class="btn btn-xs btn-outline">Next.js</span>
+          <span class="btn btn-xs btn-outline">MongoDB</span>
+          <span class="btn btn-xs btn-outline">Tailwind CSS</span>
+          <span class="btn btn-xs btn-outline">Firebase</span>
+          <span class="btn btn-xs btn-outline">JWT Auth</span>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4">
+
+          <!-- LIVE LINK -->
+          <a href="https://your-working-project-link.com"
+             target="_blank"
+             class="btn btn-primary hover:scale-105 transition">
+
+            Live Preview
+
+          </a>
+
+          <!-- GITHUB -->
+          <a href="https://github.com/yourgithub/project"
+             target="_blank"
+             class="btn btn-outline btn-primary hover:scale-105 transition">
+
+            GitHub Repo
+
+          </a>
+
+        </div>
+
+        <!-- NOTE -->
+        <p class="text-xs text-gray-400 mt-5 italic">
+          Once the project is completed, it will be added to the "My Projects" section.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- Project Animation Style -->
