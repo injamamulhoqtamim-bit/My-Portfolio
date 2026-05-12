@@ -256,6 +256,15 @@ color:#ff0000;
 }
 
 
+#scrollToTop {
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+#scrollToTop:hover {
+  box-shadow: 0 15px 30px rgba(139, 92, 246, 0.5);
+}
+
+
 </style>
 
 </head>
@@ -1965,6 +1974,16 @@ class="textarea textarea-bordered w-full bg-transparent border-blue-500 text-whi
 
 </section>
 
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" 
+        class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 
+               text-white rounded-full shadow-2xl flex items-center justify-center 
+               text-3xl hover:scale-110 active:scale-95 transition-all duration-300 
+               opacity-0 invisible z-[9999] border border-white/30">
+  ↑
+</button>
+
 <!-- Footer -->
 <!-- ===== ULTRA RESPONSIVE VIDEO FOOTER ===== -->
 <footer class="relative w-full text-white overflow-hidden">
@@ -2269,6 +2288,28 @@ document.getElementById("Btn").addEventListener("click", function(){
     alert("❌ Failed to send message");
   });
 
+});
+</script>
+
+<script>
+// Scroll to Top Button Functionality
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    scrollToTopBtn.classList.remove("opacity-0", "invisible");
+    scrollToTopBtn.classList.add("opacity-100", "visible");
+  } else {
+    scrollToTopBtn.classList.add("opacity-0", "invisible");
+    scrollToTopBtn.classList.remove("opacity-100", "visible");
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
 </script>
 
